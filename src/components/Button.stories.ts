@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/vue3-vite';
-import { fn } from 'storybook/test';
-import Button from './Button.vue';
+import type { Meta, StoryObj } from '@storybook/vue3-vite'
+import { fn } from 'storybook/test'
+import Button from './Button.vue'
 
 const meta = {
   title: 'Components/Button',
@@ -28,10 +28,10 @@ const meta = {
     disabled: false,
     onClick: fn(),
   },
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof Button>
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
   args: {
@@ -44,7 +44,7 @@ export const Primary: Story = {
     },
     template: '<Button v-bind="args">Primary Button</Button>',
   }),
-};
+}
 
 export const Secondary: Story = {
   args: {
@@ -57,7 +57,7 @@ export const Secondary: Story = {
     },
     template: '<Button v-bind="args">Secondary Button</Button>',
   }),
-};
+}
 
 export const Danger: Story = {
   args: {
@@ -70,7 +70,7 @@ export const Danger: Story = {
     },
     template: '<Button v-bind="args">Danger Button</Button>',
   }),
-};
+}
 
 export const Small: Story = {
   args: {
