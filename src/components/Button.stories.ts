@@ -12,7 +12,7 @@ const meta = {
   argTypes: {
     variant: {
       control: { type: 'select' },
-      options: ['primary', 'secondary', 'danger'],
+      options: ['indigo', 'magenta', 'danger'],
     },
     size: {
       control: { type: 'select' },
@@ -23,7 +23,7 @@ const meta = {
     },
   },
   args: {
-    variant: 'primary',
+    variant: 'indigo',
     size: 'medium',
     disabled: false,
     onClick: fn(),
@@ -33,29 +33,29 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Primary: Story = {
+export const Indigo: Story = {
   args: {
-    variant: 'primary',
+    variant: 'indigo',
   },
   render: (args) => ({
     components: { Button },
     setup() {
       return { args }
     },
-    template: '<Button v-bind="args">Primary Button</Button>',
+    template: '<Button v-bind="args">詳細</Button>',
   }),
 }
 
-export const Secondary: Story = {
+export const Magenta: Story = {
   args: {
-    variant: 'secondary',
+    variant: 'magenta',
   },
   render: (args) => ({
     components: { Button },
     setup() {
       return { args }
     },
-    template: '<Button v-bind="args">Secondary Button</Button>',
+    template: '<Button v-bind="args">詳細</Button>',
   }),
 }
 
@@ -68,7 +68,7 @@ export const Danger: Story = {
     setup() {
       return { args }
     },
-    template: '<Button v-bind="args">Danger Button</Button>',
+    template: '<Button v-bind="args">詳細</Button>',
   }),
 }
 
@@ -81,7 +81,7 @@ export const Small: Story = {
     setup() {
       return { args }
     },
-    template: '<Button v-bind="args" @click="args.onClick">Small Button</Button>',
+    template: '<Button v-bind="args" @click="args.onClick">詳細</Button>',
   }),
 }
 
@@ -94,7 +94,7 @@ export const Large: Story = {
     setup() {
       return { args }
     },
-    template: '<Button v-bind="args" @click="args.onClick">Large Button</Button>',
+    template: '<Button v-bind="args" @click="args.onClick">詳細</Button>',
   }),
 }
 
@@ -107,7 +107,7 @@ export const Disabled: Story = {
     setup() {
       return { args }
     },
-    template: '<Button v-bind="args" @click="args.onClick">Disabled Button</Button>',
+    template: '<Button v-bind="args" @click="args.onClick">詳細</Button>',
   }),
 }
 
@@ -116,9 +116,9 @@ export const AllVariants: Story = {
     components: { Button },
     template: `
       <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-        <Button variant="primary">Primary</Button>
-        <Button variant="secondary">Secondary</Button>
-        <Button variant="danger">Danger</Button>
+        <Button variant="indigo">詳細</Button>
+        <Button variant="magenta">詳細</Button>
+        <Button variant="danger">詳細</Button>
       </div>
     `,
   }),
@@ -129,9 +129,9 @@ export const AllSizes: Story = {
     components: { Button },
     template: `
       <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
-        <Button size="small">Small</Button>
-        <Button size="medium">Medium</Button>
-        <Button size="large">Large</Button>
+        <Button size="small">詳細</Button>
+        <Button size="medium">詳細</Button>
+        <Button size="large">詳細</Button>
       </div>
     `,
   }),
